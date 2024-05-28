@@ -1,0 +1,75 @@
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.csproj.AssemblyReference.cache
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.AssemblyInfoInputs.cache
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.AssemblyInfo.cs
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.csproj.CoreCompileInputs.cache
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.MvcApplicationPartsAssemblyInfo.cs
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.MvcApplicationPartsAssemblyInfo.cache
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\appsettings.Development.json
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\appsettings.json
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Biuro_podrozy_praca_inzynierska.exe
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Biuro_podrozy_praca_inzynierska.deps.json
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Biuro_podrozy_praca_inzynierska.runtimeconfig.json
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Biuro_podrozy_praca_inzynierska.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Biuro_podrozy_praca_inzynierska.pdb
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Humanizer.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\MySqlConnector.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\staticwebassets.build.json
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\staticwebassets.development.json
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\scopedcss\bundle\Biuro_podrozy_praca_inzynierska.styles.css
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.csproj.CopyComplete
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\refint\Biuro_podrozy_praca_inzynierska.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.pdb
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.genruntimeconfig.cache
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\ref\Biuro_podrozy_praca_inzynierska.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\appsettings.json
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Biuro_podrozy_praca_inzynierska.exe
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Biuro_podrozy_praca_inzynierska.deps.json
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Biuro_podrozy_praca_inzynierska.runtimeconfig.json
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Biuro_podrozy_praca_inzynierska.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Biuro_podrozy_praca_inzynierska.pdb
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Humanizer.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.csproj.AssemblyReference.cache
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.AssemblyInfoInputs.cache
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.AssemblyInfo.cs
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.csproj.CoreCompileInputs.cache
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\scopedcss\bundle\Biuro_podrozy_praca_inzynierska.styles.css
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.csproj.CopyComplete
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\refint\Biuro_podrozy_praca_inzynierska.dll
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.pdb
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.genruntimeconfig.cache
+C:\Users\MountLee\Desktop\Inzynierka\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\ref\Biuro_podrozy_praca_inzynierska.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.RazorAssemblyInfo.cache
+D:\Projekty Visual\Biuro_podrozy_praca_inzynierska\Biuro_podrozy_praca_inzynierska\obj\Debug\net6.0\Biuro_podrozy_praca_inzynierska.RazorAssemblyInfo.cs
