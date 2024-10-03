@@ -1,0 +1,35 @@
+﻿@page
+@model inz.Pages.AdminCountryCreateModel
+@{
+    ViewData["Title"] = "Trip page";
+}
+
+@if (User.IsInRole("Admin"))
+{
+    <form method="post">
+        <div class="form-group">
+            <label>Nazwa państwa</label>
+            <br />
+            <input asp-for="name" class="form-control" placeholder="Wprowadź nazwę">
+        </div>
+        <div class="form-group">
+            <label>Wybierz kontynent</label>
+            <br />
+            <select id="country-select"
+                    class="form-select"
+                    aria-describedby="country-label"
+                    asp-for="continentName">
+                @foreach (var Continent in Model.continents)
+                {
+                    <option value="@Continent.Name">@Continent.Name</option>
+                }
+            </select>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Stwórz</button>
+    </form>
+}
+else
+{
+    Response.Redirect("/Index");
+}

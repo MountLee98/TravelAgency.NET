@@ -1,0 +1,35 @@
+﻿@page
+@model inz.Pages.AdminCountryEditModel
+@{
+    ViewData["Title"] = "Trip page";
+}
+@if (User.IsInRole("Admin"))
+{
+    <form method="post">
+        <input type="number" value="@Model.country.Id" hidden asp-for="Id2" />
+        <div class="form-group">
+            <label asp-for="name">Nazwa państwa</label>
+            <br />
+            <input asp-for="name" class="form-control" placeholder="Wprowadź nazwę">
+        </div>
+        <div class="form-group">
+            <label>Wybierz kontynent</label>
+            <br />
+            <select id="country-select"
+                    class="form-select"
+                    aria-describedby="country-label"
+                    asp-for="continentName">
+                @foreach (var Continent in Model.continents)
+                {
+                    <option value="@Continent.Name">@Continent.Name</option>
+                }
+            </select>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Edytuj</button>
+    </form>
+}
+else
+{
+    Response.Redirect("/Index");
+}

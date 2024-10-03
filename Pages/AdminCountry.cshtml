@@ -1,0 +1,60 @@
+﻿@page
+@model inz.Pages.AdminCountryModel
+@{
+    ViewData["Title"] = "Trip page";
+}
+@if (User.IsInRole("Admin"))
+{
+    <a href="@Url.Page("/AdminCountryCreate")" target="_blank">
+        Stwórz państwo
+    </a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Nazwa państwa
+                </th>
+                <th>
+                    Nazwa kontynentu
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var country in Model.countries)
+            {
+                <tr>
+                    <td>
+                        @country.Id
+                    </td>
+
+                    <td>
+                        @country.Name
+                    </td>
+                    <td>
+                        @country.Continent.Name
+                    </td>
+                    <td>
+                        <a href="@Url.Page("/AdminCountryEdit", new { id = country.Id})" target="_blank">
+                            Edytuj
+                        </a>
+                    </td>
+                    <form asp-page-handler="delete" method="post">
+                    <td>
+                        <input type="number" value="@country.Id" hidden asp-for="Id" />
+                        <button>
+                            Usuń
+                        </button>
+                    </td>
+                    </form>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    Response.Redirect("/Index");
+}

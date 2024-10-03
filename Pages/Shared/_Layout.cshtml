@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - inz</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/inz.styles.css" asp-append-version="true" />
+    <style>
+        .rounded-bottom-corners {
+        border-bottom-left-radius: 4rem;
+        border-bottom-right-radius: 4rem;
+        }
+
+        .rounded-top-corners {
+        border-top-left-radius: 4rem;
+        border-top-right-radius: 4rem;
+        }
+
+        .navbar-custom {
+        background-color: #ffdb4d;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    @if (User.IsInRole("Admin"))
+    {
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-custom navbar-toggleable-sm border-bottom box-shadow mb-3 rounded-bottom-corners">
+                <div class="container" style="max-width: 85%">
+                    <a class="navbar-brand" asp-area="" asp-page="/Index">inz</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/AdminContinent">Kontynenty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/AdminCountry">Państwa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/AdminCity">Miasta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/AdminHotel">Hotele</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/AdminAirport">Lotniska</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/AdminTrip">Wycieczki</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/AdminTripPurchase">Rezerwacje wycieczek</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/AdminUser">Użytkowniwcy</a>
+                            </li>
+                        </ul>
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted rounded-top-corners navbar-custom" style="position: absolute;">
+            <div class="container">
+                &copy; 2024 - Michał Paczkowski - <a asp-area="" asp-page="/Privacy">113085</a>
+            </div>
+        </footer>
+    } else
+    {
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-custom navbar-toggleable-sm border-bottom box-shadow mb-3 rounded-bottom-corners">
+                <div class="container" style="max-width: 85%">
+                    <a class="navbar-brand" asp-area="" asp-page="/Index">inz</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/LastMinute">Last Minute</a>
+                            </li>
+                        </ul>
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted rounded-top-corners navbar-custom" style="position: absolute;">
+            <div class="container">
+                &copy; 2024 - Michał Paczkowski - 113085
+            </div>
+        </footer>
+    }
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

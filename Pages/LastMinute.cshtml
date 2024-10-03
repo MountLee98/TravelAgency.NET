@@ -1,0 +1,47 @@
+﻿@page
+@model inz.Pages.LastMinuteModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="">
+    @foreach (var trip in Model.TripsLastMinute)
+    {
+        <br />
+        <center>
+            <div class="card mb-3" style="max-width: 70%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <a href="@Url.Page("/Trip", new { id = trip.Id})" target="_blank">
+                            <img src="@Url.Action("ShowImage", "Trip", new { id = trip.Id })" class="img-fluid rounded-start" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                <a href="@Url.Page("/Trip", new { id = trip.Id})" target="_blank">
+                                    <b>@trip.Name</b><label for="name" text="@trip.Name" />
+                                </a>
+                            </h5>
+                            <p class="card-text">Hotel: <b>@trip.Hotel.Name</b><label for="hotel" text="@trip.Hotel.Name" /></p>
+                            <p class="card-text">Lot z: <b>@trip.FromAirport.Name</b><label for="from" text="@trip.FromAirport.Name" /></p>
+                            <p class="price-container">
+                                Dorosły: <span text="@trip.PriceForAdult.ToString("0.00")"><b>@trip.PriceForAdult.ToString("0.00")</b></span><span><b>zł</b></span>
+                            </p>
+                            <p class="price-container">
+                                Dzieci: <span text="@trip.PriceForChild.ToString("0.00")"><b>@trip.PriceForChild.ToString("0.00")</b></span><span><b>zł</b></span>
+                            </p>
+                            <p class="card-text">
+                                Czas trwania wycieczki: <br />
+                                <span text="@trip.DepartureDate"><b>@trip.DepartureDate</b></span>
+                                do
+                                <span text="@trip.ArrivalDate"><b>@trip.ArrivalDate</b></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+    }
+</div>

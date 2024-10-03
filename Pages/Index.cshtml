@@ -1,0 +1,290 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@if(User.IsInRole("Admin")) {
+    <center>
+        <h5><b>PANEL ADMINISTRACYJNY</b></h5>
+    </center>
+} else {
+    <form method="get">
+        <div class="container-sm">
+            <div class="row">
+                <div class="mb-2 col">
+                    <div class="h-100 card">
+                        <div class="card-body">
+                            <h5 class="card-title">Kierunki i data wyjazdu</h5>
+                            <div class="mb-2">
+                                <label id="country-label"
+                                       for="country-select"
+                                       class="form-label">Kraj</label>
+                                <select id="country-select"
+                                        class="form-select"
+                                        aria-describedby="country-label"
+                                        asp-for="Country">
+                                    <option value="krajGdziekolwiek">Gdziekolwiek</option>
+                                    @foreach (var Country in Model.Countries)
+                                    {
+                                        <option value="@Country.Name">@Country.Name</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label id="city-label"
+                                       for="city-select"
+                                       class="form-label">Miasto</label>
+                                <select id="city-select"
+                                        class="form-select"
+                                        aria-describedby="city-label"
+                                        asp-for="City">
+                                    <option value="miastoGdziekolwiek">Gdziekolwiek</option>
+                                    @foreach (var City in Model.Cities)
+                                    {
+
+                                        <option value="@City.Name">@City.Name</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label id="duration-label"
+                                       for="duration-select"
+                                       class="form-label">Ilość dni</label>
+                                <select class="form-select"
+                                        id="duration-select"
+                                        aria-describedby="duration-label"
+                                        asp-for="Duration">
+                                    <option value="3Dni">do 3 dni</option>
+                                    <option value="4-6Dni">4-6 dni</option>
+                                    <option value="7-9Dni">7-9 dni</option>
+                                    <option value="10-13Dni">10-13 dni</option>
+                                    <option value="14-16Dni">14-16 dni</option>
+                                    <option value="17Dni">17 i więcej dni</option>
+                                    <option value="dokladnaData">Dokładna data</option>
+                                </select>
+                            </div>
+                            <div id="departure-date" class="mb-2">
+                                <label id="departure-date-label"
+                                       for="departure-date-input"
+                                       class="form-label">Data wyjazdu</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi-calendar"></i>
+                                    </span>
+                                    <input type="date"
+                                           class="form-control"
+                                           id="departure-date-input"
+                                           aria-describedby="departure-date-label"
+                                           onfocus="blur()"
+                                           asp-for="DepartureDate" />
+                                </div>
+                            </div>
+                            <div id="return-date" class="mb-2">
+                                <label id="return-date-label"
+                                       for="return-date-input"
+                                       class="form-label">Data powrotu</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi-calendar-fill"></i>
+                                    </span>
+                                    <input type="date"
+                                           onkeydown="return false"
+                                           class="form-control"
+                                           id="return-date-input"
+                                           aria-describedby="return-date-label"
+                                           onfocus="blur()"
+                                           asp-for="ArrivalDate" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-2 col">
+                    <div class="h-100 card">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <div class="mb-2">
+                                <label id="airport-label"
+                                       for="airport-select"
+                                       class="form-label">Wybór lotniska</label>
+                                <select class="form-select"
+                                        id="airport-select"
+                                        aria-describedby="airport-label"
+                                        asp-for="Airport">
+                                    <option value="lotniskoGdziekolwiek">Gdziekolwiek</option>
+                                    @foreach (var Airport in Model.Airports)
+                                    {
+                                        <option value="@Airport.Name">@Airport.Name</option>
+                                    }
+                                </select>
+                            </div>
+                            <label class="form-label">Pasażerowie</label>
+                            <div class="mb-2">
+                                <div class="input-group">
+                                    <label for="adults-input" class="input-group-text">Dorośli</label>
+                                    <input type="number"
+                                           min="0"
+                                           max="100"
+                                           class="form-control"
+                                           id="adults-input"
+                                           aria-describedby="adults-label"
+                                           asp-for="AdultNumber" />
+                                </div>
+                                <span id="adults-label" class="form-text">Od 13 lat</span>
+                            </div>
+                            <div class="mb-2">
+                                <div class="input-group">
+                                    <label for="children-input" class="input-group-text">Dzieci</label>
+                                    <input type="number"
+                                           min="0"
+                                           max="100"
+                                           class="form-control"
+                                           id="children-input"
+                                           aria-describedby="children-label"
+                                           asp-for="ChildNumber" />
+                                </div>
+                                <span id="children-label" class="form-text">Do 12 lat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <button id="search-button" class="w-100 btn btn-primary" asp-area="" asp-controller="Home" asp-action="Search">SZUKAJ</button> -->
+            <button type="submit" class="w-100 btn btn-primary">SZUKAJ</button>
+        </div>
+    </form>
+
+    <div class="">
+        @foreach (var trip in Model.Trips)
+        {
+            <br />
+            <center>
+                <div class="card mb-3" style="max-width: 70%;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="@Url.Page("/Trip", new { id = trip.Id})" target="_blank">
+                                <img src="@Url.Action("ShowImage", "Trip", new { id = trip.Id })" class="img-fluid rounded-start" alt="...">
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+
+                                <h5 class="card-title">
+                                    <a href="@Url.Page("/Trip", new { id = trip.Id})" target="_blank">
+                                        <b>@trip.Name</b><label for="name" text="@trip.Name" />
+                                    </a>
+                                </h5>
+                                <p class="card-text">Hotel: <b>@trip.Hotel.Name</b><label for="hotel" text="@trip.Hotel.Name" /></p>
+                                <p class="card-text">Lot z: <b>@trip.FromAirport.Name</b><label for="from" text="@trip.FromAirport.Name" /></p>
+                                <p class="price-container">
+                                    Dorosły: <span text="@trip.PriceForAdult.ToString("0.00")"><b>@trip.PriceForAdult.ToString("0.00")</b></span><span><b>zł</b></span>
+                                </p>
+                                <p class="price-container">
+                                    Dzieci: <span text="@trip.PriceForChild.ToString("0.00")"><b>@trip.PriceForChild.ToString("0.00")</b></span><span><b>zł</b></span>
+                                </p>
+                                <p class="card-text">
+                                    Czas trwania wycieczki: <br />
+                                    <span text="@trip.DepartureDate"><b>@trip.DepartureDate</b></span>
+                                    do
+                                    <span text="@trip.ArrivalDate"><b>@trip.ArrivalDate</b></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        }
+    </div>
+
+    <center>
+        <h1>
+            WYCIECZKI LAST MINUTE
+        </h1>
+    </center>
+
+    <div class="card-group">
+        @foreach (var trip in Model.TripsLastMinute)
+        {
+            <a href="@Url.Page("/Trip", new { id = trip.Id})" target="_blank">
+                <div class="card" style="width: 18rem;">
+                    <img src="@Url.Action("ShowImage", "Trip", new { id = trip.Id })" alt="Image" class="card-img-top">
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <h5>@trip.Name<label for="name" text="@trip.Name" /></h5>
+                        </h5>
+                        <p class="card-text"></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <p>Hotel: @trip.Hotel.Name<label for="hotel" text="@trip.Hotel.Name" /></p>
+                            <p>Lot z: @trip.FromAirport.Name<label for="from" text="@trip.FromAirport.Name" /></p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="price-container">
+                                Dorosły: <span text="@trip.PriceForAdult.ToString("0.00")">@trip.PriceForAdult.ToString("0.00")</span><span>zł</span>
+                            </p>
+                            <p class="price-container">
+                                Dzieci: <span text="@trip.PriceForChild.ToString("0.00")">@trip.PriceForChild.ToString("0.00")</span><span>zł</span>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p>
+                                Czas trwania wycieczki: <br />
+                                <span text="@trip.DepartureDate">@trip.DepartureDate</span>
+                                do
+                                <span text="@trip.ArrivalDate">@trip.ArrivalDate</span>
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="" class="card-link"></a>
+                        <a href="" class="card-link"></a>
+                    </div>
+                </div>
+            </a>
+        }
+
+    </div>
+
+
+    <script type="text/javascript">
+        const countrySelect = document.getElementById("country-select");
+        const citySelect = document.getElementById("city-select");
+        const departureDateInput = document.getElementById("departure-date-input");
+        const returnDate = document.getElementById("return-date");
+        const returnDateInput = document.getElementById("return-date-input");
+        const durationSelect = document.getElementById("duration-select");
+        const airportSelect = document.getElementById("airport-select");
+        const adultsInput = document.getElementById("adults-input");
+        const childrenInput = document.getElementById("children-input");
+        //    const searchButton = document.getElementById("search-button");
+        const reset = () => {
+            if (durationSelect.value === "dokladnaData") {
+                returnDate.classList.remove("d-none");
+            } else {
+                returnDate.classList.add("d-none");
+            }
+      searchButton.disabled = true;
+        };
+
+        departureDateInput.min = new Date().toISOString().split("T")[0];
+
+        durationSelect.addEventListener("change", () => {
+            if (durationSelect.value === "dokladnaData") {
+                returnDate.classList.remove("d-none");
+            } else {
+                returnDate.classList.add("d-none");
+            }
+        });
+
+        departureDateInput.addEventListener("change", () => {
+            returnDateInput.min = departureDateInput.valueAsDate.toISOString().split("T")[0];
+            if (departureDateInput.value > returnDateInput.value) {
+                returnDateInput.valueAsDate = departureDateInput.valueAsDate;
+            }
+        });
+
+        reset();
+    </script>
+}

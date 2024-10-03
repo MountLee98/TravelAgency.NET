@@ -1,0 +1,85 @@
+﻿@page
+@model inz.Areas.Identity.Pages.Account.Manage.TripPurchasesModel
+@{
+    ViewData["Title"] = "Rezerwacje wycieczek";
+    ViewData["ActivePage"] = ManageNavPages.TripPurchases;
+}
+
+<h3>@ViewData["Title"]</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nazwa wycieczki
+            </th>
+            <th>
+                Wylot
+            </th>
+            <th>
+                Przylot
+            </th>
+            <th>
+                Hotel
+            </th>
+            <th>
+                Data wyjazdu
+            </th>
+            <th>
+                Data powrotu
+            </th>
+            <th>
+                Ilość dorosłych
+            </th>
+            <th>
+                Ilość dzieci
+            </th>
+            <th>
+                Cena
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var trip in Model.trips)
+        {
+            <tr>
+                <td>
+                    @trip.Trip.Name
+                </td>
+            
+                <td>
+                    @trip.Trip.FromAirport.Name
+                </td>
+                <td>
+                    @trip.Trip.ToAirport.Name
+                </td>
+                <td>
+                    @trip.Trip.Hotel.Name
+                </td>
+                <td>
+                    @trip.Trip.DepartureDate
+                </td>
+                <td>
+                    @trip.Trip.ArrivalDate
+                </td>
+                <td>
+                    @trip.AdultNumber
+                </td>
+                <td>
+                    @trip.ChildNumber
+                </td>
+                <td>
+                    @trip.Price.ToString("0.00")
+                </td>
+                <form method="post">
+                <td>
+                    <input type="number" value="@trip.Id" hidden asp-for="Id" />
+                    <button type="submit">
+                        Usuń rezerwację
+                    </button>
+                </td>
+                </form>
+            </tr>
+        }
+    </tbody>
+</table>

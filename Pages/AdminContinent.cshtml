@@ -1,0 +1,53 @@
+﻿@page
+@model inz.Pages.AdminContinentModel
+@{
+    ViewData["Title"] = "Trip page";
+}
+@if (User.IsInRole("Admin"))
+{
+    <a href="@Url.Page("/AdminContinentCreate")" target="_blank">
+        Stwórz kontynent
+    </a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Nazwa
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var continent in Model.continents)
+            {
+                <tr>
+                    <td>
+                        @continent.Id
+                    </td>
+
+                    <td>
+                        @continent.Name
+                    </td>
+                    <td>
+                        <a href="@Url.Page("/AdminContinentEdit", new { id = continent.Id})" target="_blank">
+                            Edytuj
+                        </a>
+                    </td>
+                    <form asp-page-handler="delete" method="post">
+                    <td>
+                        <input type="number" value="@continent.Id" hidden asp-for="Id" />
+                        <button>
+                            Usuń
+                        </button>
+                    </td>
+                    </form>
+                </tr>
+            }
+        </tbody>
+    </table>
+} else
+{
+    Response.Redirect("/Index");
+}

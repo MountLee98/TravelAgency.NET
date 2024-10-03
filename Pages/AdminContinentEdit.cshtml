@@ -1,0 +1,22 @@
+﻿@page
+@model inz.Pages.AdminContinentEditModel
+@{
+    ViewData["Title"] = "Trip page";
+}
+@if (User.IsInRole("Admin"))
+{
+    <form method="post">
+        <input type="number" value="@Model.continent.Id" hidden asp-for="Id2" />
+        <div class="form-group">
+            <label asp-for="name">Nazwa kontynentu</label>
+            <br />
+            <input asp-for="name" class="form-control" placeholder="Wprowadź nazwę">
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Edytuj</button>
+    </form>
+}
+else
+{
+    Response.Redirect("/Index");
+}

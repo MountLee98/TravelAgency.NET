@@ -1,0 +1,246 @@
+﻿@page
+@model inz.Pages.TripModel
+@{
+    ViewData["Title"] = "Trip page";
+}
+
+<style>
+    .breadcrumb-item+.breadcrumb-item::before {
+        content: ">"
+    }
+
+    .product_name {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 0px
+    }
+
+    .product_price {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 9px;
+        clear: left
+    }
+
+    .product_discount {
+        display: inline-block;
+        font-size: 17px;
+        font-weight: 300;
+        margin-top: 9px;
+        clear: left;
+        margin-left: 10px;
+        color: red
+    }
+
+    .singleline {
+        margin-top: 1rem;
+        margin-bottom: .40rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, .1)
+    }
+
+    .product_info {
+        color: #4d4d4d;
+        display: inline-block
+    }
+
+    .product_quantity {
+        width: 104px;
+        height: 47px;
+        border: solid 1px #e5e5e5;
+        border-radius: 3px;
+        overflow: hidden;
+        padding-left: 8px;
+        padding-top: -4px;
+        padding-bottom: 44px;
+        float: left;
+        margin-right: 22px;
+        margin-bottom: 11px
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+        text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+    }
+
+    body {
+        font-family: 'Rubik', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        background: #FFFFFF;
+        color: #000000
+    }
+
+    div {
+        display: block;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    .image_selected img {
+        max-width: 100%
+    }
+
+    .product_text {
+        margin-top: 27px
+    }
+</style>
+
+<div class="super_container">
+    <div>
+        <div class="container-fluid" style=" background-color: #fff; padding: 11px;">
+            <div class="row">
+                <div class="col-lg-4 order-lg-2 order-1">
+                    <div class="image_selected"><img src="@Url.Action("ShowImage", "Trip", new { id = @Model.trip.Id })" alt=""></div>
+                </div>
+                <div class="col-lg-6 order-3">
+                    <div class="product_description">
+                        <div class="product_name"><b>@Model.trip.Name</b></div>
+                        <div> <span class="product_price">Dorosły: @Model.trip.PriceForAdult.ToString("0.00") zł</span> <span style='color:black'>Dziecko: @Model.trip.PriceForChild.ToString("0.00") zł<span> </div>
+                        <hr class="singleline">
+                        <div> <span class="product_info">@Model.trip.Description<span><br> </div>
+                        <hr class="singleline">
+                        <div>
+                            <span class="product_price">Hotel: @Model.trip.Hotel.Name</span> <br/>
+                            <span class="product_price">Wylot z: @Model.trip.FromAirport.Name</span> <br />
+                            <span class="product_price">Przylot do: @Model.trip.ToAirport.Name</span> <br />
+                            <span class="product_price"> Czas trwania wycieczki: @Model.trip.DepartureDate do @Model.trip.ArrivalDate </span>
+                        </div>
+                        <br />
+                        @if(User.Identity == null || !User.Identity.IsAuthenticated )
+                        {
+                            <div class="row">
+                                <div class="mb-2">
+                                    <div class="input-group">
+                                        <label for="adults-input" class="input-group-text">Dorośli</label>
+                                        <input type="number"
+                                               min="0"
+                                               max="100"
+                                               class="form-control"
+                                               id="adults-input"
+                                               aria-describedby="adults-label" />
+                                    </div>
+                                    <span id="adults-label" class="form-text">Od 13 lat</span>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="input-group">
+                                        <label for="children-input" class="input-group-text">Dzieci</label>
+                                        <input type="number"
+                                               min="0"
+                                               max="100"
+                                               class="form-control"
+                                               id="children-input"
+                                               aria-describedby="children-label" />
+                                    </div>
+                                    <span id="children-label" class="form-text">Do 12 lat</span>
+                                </div>
+                                <div class="alert alert-warning" role="alert">
+                                    Zaloguj się aby móc zarezerwować wycieczkę
+                                </div>
+
+                            </div>
+                        } else
+                        {
+                            <form method="post">
+                            <div class="row">
+                                <div class="mb-2">
+                                    <div class="input-group">
+                                        <label for="adults-input" class="input-group-text">Dorośli</label>
+                                        <input type="number"
+                                               min="0"
+                                               max="100"
+                                               class="form-control"
+                                               id="adults-input"
+                                               aria-describedby="adults-label" 
+                                                   asp-for="adultQuantity" />
+                                    </div>
+                                    <span id="adults-label" class="form-text">Od 13 lat</span>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="input-group">
+                                        <label for="children-input" class="input-group-text">Dzieci</label>
+                                        <input type="number"
+                                               min="0"
+                                               max="100"
+                                               class="form-control"
+                                               id="children-input"
+                                               aria-describedby="children-label"
+                                               asp-for="childQuantity" />
+                                    </div>
+                                    <span id="children-label" class="form-text">Do 12 lat</span>
+                                </div>
+                                    <input type="number" value="@Model.trip.Id" hidden asp-for="Id2" />
+                                <div class="col-xs-6">
+                                    <button type="submit" class="btn btn-success shop-button">Zarezerwuj</button>
+                                </div>
+                            </div>
+                            </form>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<center>
+    <h1>
+        WYCIECZKI LAST MINUTE
+    </h1>
+</center>
+
+<div class="card-group">
+    @foreach (var trip in Model.TripsLastMinute)
+    {
+        <a href="@Url.Page("/Trip", new { id = trip.Id})" target="_blank">
+            <div class="card" style="width: 18rem;">
+                <img src="@Url.Action("ShowImage", "Trip", new { id = trip.Id })" alt="Image" class="card-img-top">
+
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <h5>@trip.Name<label for="name" text="@trip.Name" /></h5>
+                    </h5>
+                    <p class="card-text"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <p>Hotel: @trip.Hotel.Name<label for="hotel" text="@trip.Hotel.Name" /></p>
+                        <p>Lot z: @trip.FromAirport.Name<label for="from" text="@trip.FromAirport.Name" /></p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="price-container">
+                            Dorosły: <span text="@trip.PriceForAdult.ToString("0.00")">@trip.PriceForAdult.ToString("0.00")</span><span>zł</span>
+                        </p>
+                        <p class="price-container">
+                            Dzieci: <span text="@trip.PriceForChild.ToString("0.00")">@trip.PriceForChild.ToString("0.00")</span><span>zł</span>
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>
+                            Czas trwania wycieczki: <br />
+                            <span text="@trip.DepartureDate">@trip.DepartureDate</span>
+                            do
+                            <span text="@trip.ArrivalDate">@trip.ArrivalDate</span>
+                        </p>
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link"></a>
+                    <a href="#" class="card-link"></a>
+                </div>
+            </div>
+        </a>
+    }
+
+</div>
+
+<script type='text/javascript'></script>
